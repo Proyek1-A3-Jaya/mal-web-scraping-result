@@ -89,25 +89,6 @@ nav ul li a:hover::after {
     margin-left: 20px;
 }
 
-.btn {
-    background-color: #080808;
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: thin solid #598d39;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-    font-size: 18px;
-    font-weight: 630;
-}
-
-.btn:hover {
-    background: #598d39;
-}
-
 .copyright {
     width: 100%;
     text-align: center;
@@ -226,6 +207,32 @@ nav .fas {
 
 .product__item__pic.set-bg:hover .layer{
     height: 100%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    color: #fff;
+    border: 1px solid #598d39;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: #000000;
+    font-weight: 600;
+}
+
+.pagination .page-link:hover {
+    background-color: #598d39;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
