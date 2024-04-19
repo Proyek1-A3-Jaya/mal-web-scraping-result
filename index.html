@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAnimeList Scraping - A3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/808000fac2.js" crossorigin="anonymous"></script>
+    <script src="js/query.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/UI/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="scraping.html#scraping">Scraping</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div id="anime-trending">
+        <div class="container">
+            <div class="column">
+                <div class="anime-rank-left">
+                    <h1 class="sub-title">Trending Now</h1>
+                    <div class="trending__anime">
+                        <!-- Anime akan muncul di sini -->
+                    </div>
+                </div>
+                <div class="anime-rank-right">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © A3. Dibuat Dengan <i class="fa-solid fa-heart"></i> Di Depan Laptop</p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
