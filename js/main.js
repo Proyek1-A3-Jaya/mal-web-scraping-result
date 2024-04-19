@@ -29,7 +29,7 @@ function populateTrendingAnime(data) {
                 <div class="product__item__pic set-bg" data-setbg="${anime.image_urls}" style="background-image: url(${anime.image_urls})">
                     <div class="rank">Rank ${anime.rank}</div>
                     <div class="layer">
-                            <p> Alt Title: ${anime.altTitle} </p>
+                            <p> Alt Title: ${anime.altTittle} </p>
                             <p> Rating: ${anime.rating} </p>
                             <p> Type: ${anime.type} </p>
                             <p> Volumes: ${anime.volumes} </p>
