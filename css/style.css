@@ -25,13 +25,7 @@ body {
 }
 
 .container {
-    padding: 20px 4%;
-}
-
-.column {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 30px 7%;
 }
 
 nav {
@@ -134,13 +128,6 @@ nav .fas {
 
 #anime-trending{
     padding: 50px 0;
-}
-
-.anime-rank-left{
-    flex-basis: 85%;
-}
-.anime-rank-right{
-    flex-basis: 35%;
 }
 
 .trending__anime{
