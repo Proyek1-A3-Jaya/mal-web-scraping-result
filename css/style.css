@@ -374,9 +374,8 @@ nav .fas {
 /* Responsiveness */
 @media screen and (max-width: 768px) {
     .slider-container {
-        max-width: 90%;
+        max-width: 95%;
         margin: 0 auto;
-        flex-direction: row-reverse;
     }
 
     .slider {
