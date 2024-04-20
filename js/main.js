@@ -94,3 +94,78 @@ function populateTrendingAnime(data) {
 
     setupPagination();
 }
+
+function populateSlider(data) {
+    const slider = document.querySelector('.slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let slideIndex = 0;
+
+    // Function untuk menambahkan slide
+    function addSlide(index) {
+        if (index >= 0 && index < data.length) {
+            const manga = data[index];
+            const slide = document.createElement('div');
+            slide.classList.add('slide');
+            slide.innerHTML = `
+                <img src="${manga.image_urls[0]}" alt="${manga.title}">
+                <div class="slide-content">
+                    <h2>${manga.title}</h2>
+                    <p>${manga.synopsis}</p>
+                </div>
+            `;
+            slider.appendChild(slide);
+        }
+    }
+
+    // Function untuk menampilkan slide berikutnya
+    function nextSlide() {
+        if (slideIndex < data.length - 1) {
+            slideIndex++;
+            if (slideIndex > 4) {
+                slideIndex = 0;
+            }
+        } else {
+            slideIndex = 0;
+        }
+        showSlide();
+    }
+
+    // Function untuk menampilkan slide sebelumnya
+    function prevSlide() {
+        if (slideIndex > 0) {
+            slideIndex--;
+        } else {
+            slideIndex = 4;
+        }
+        showSlide();
+    }
+
+    // Function untuk menampilkan slide yang sesuai dengan index
+    function showSlide() {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, index) => {
+            if (index === slideIndex) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    // Tambahkan slide pertama saat halaman dimuat
+    addSlide(0);
+
+    // Tambahkan slide-slide berikutnya
+    for (let i = 1; i < 5; i++) {
+        addSlide(i);
+    }
+
+    // Tampilkan slide pertama
+    showSlide();
+
+    // Tambahkan event listener untuk tombol navigasi
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+}

@@ -279,3 +279,123 @@ nav .fas {
         font-size: 14px;
     }
 }
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto;
+    display: flex;
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-right: 15px;
+    margin-left: 0px;
+}
+
+.slide-content {
+
+    flex: 1;
+    /* padding: 0 20px; */
+    position: relative;
+    top: -50%;
+    left: 5%;
+    max-width: 11%;
+    
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    /* Atur posisi vertikal tombol */
+    left: 50%;
+    /* Menempatkan tombol di tengah secara horizontal */
+    right: 50%;
+    transform: translateX(-50%);
+    /* Menggeser tombol ke kiri sebesar setengah lebar tombol */
+}
+
+.prev-btn,
+.next-btn {
+    /* Menempatkan tombol di tengah secara horizontal */
+    background-color: #38A3A5;
+    opacity:calc(50%)
+    ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+}
+
+.prev-btn {
+    left: 15px;
+    margin-right: 5px;
+    
+}
+
+.next-btn {
+    right: 15px;
+    margin-left: 5px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .slider-container {
+        max-width: 90%;
+        margin: 0 auto;
+        flex-direction: row-reverse;
+    }
+
+    .slider {
+        flex-wrap: nowrap;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .slide img {
+        margin-right: 0; /* Menghilangkan margin kanan pada gambar */
+        margin-left: 0px; /* Memberikan margin kiri pada gambar */
+    }
+
+    .slide-content {
+        padding-left: 0; /* Menghilangkan padding kiri pada slide-content */
+        padding-right: 20px; /* Memberikan padding kanan pada slide-content */
+    }
+
+    /* Mengatur lebar tombol */
+    .prev-btn,
+    .next-btn {
+        width: 25px;
+        height: 35px;
+        font-size: 10px;
+        padding: 10px;
+    }
+    /* Mengatur jarak antara tombol */
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+}
