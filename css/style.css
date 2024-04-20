@@ -63,6 +63,10 @@ nav ul li a::after {
     transition: 0.5s;
 }
 
+nav ul li a:hover {
+    color: white !important;
+}
+
 nav ul li a:hover::after {
     width: 100%;
 }
