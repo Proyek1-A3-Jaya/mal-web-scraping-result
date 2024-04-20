@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-    padding: 30px 7%;
+    padding: 15px 0;
 }
 
 nav {
@@ -63,6 +63,10 @@ nav ul li a::after {
     transition: 0.5s;
 }
 
+nav ul li a:hover {
+    color: white !important;
+}
+
 nav ul li a:hover::after {
     width: 100%;
 }
@@ -92,10 +96,14 @@ nav ul li a:hover::after {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 22px 0;
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+}
+
+.copyright p{
+    margin-bottom: 0;
 }
 
 .copyright i {
@@ -108,7 +116,7 @@ nav .fas {
 }
 
 #anime-trending{
-    padding: 50px 0;
+    padding: 50px 9.5%;
 }
 
 .trending__anime{
@@ -120,15 +128,14 @@ nav .fas {
 }
 
 .product__item__pic.set-bg {
-    width: 230px;
-    height: 325px;
+    width: 213px;
+    height: 300px;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 15px;
-    margin-top: 90px;
+    margin-top: 80px;
     position: relative;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-right: 20px;
     margin-left: 20px;
     transition: transform 0.5s;
@@ -155,7 +162,7 @@ nav .fas {
     font-weight: 600;
     color: #fff;
     position: absolute;
-    margin-left: 25px;
+    margin-left: 22px;
     z-index: 1;
     transition: 0.5s;
 }
@@ -213,7 +220,8 @@ nav .fas {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 30px;
+    width: 100%;
 }
 
 .pagination .page-item {
