@@ -18,7 +18,7 @@ body {
 
 #header {
     width: 100%;
-    background-color: #38A3A5;
+    background-color: #12372A;
 }
 
 .container {
@@ -70,7 +70,7 @@ nav ul li a:hover::after {
 }
 
 #hero{
-    background-color: #5cb683;
+    background-color: #436850;
     padding: 80px 0;
 }
 
@@ -105,6 +105,8 @@ nav .fas {
 #anime-trending{
     padding: 50px 9.5%;
     background-color: #38A3A5;
+    background-image: url(../img/UI/bghero.png);
+    background-size: cover;
 }
 
 .trending__anime{
