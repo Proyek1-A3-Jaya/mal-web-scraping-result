@@ -277,9 +277,9 @@ nav .fas {
 
 .slider-container {
     position: relative;
-    max-width: 95%;
+    max-width:  95%;
     margin: 0 auto;
-    top: 5%;
+    top: 10%;
     bottom: 10%;
     overflow: hidden;
     height: 100%;
