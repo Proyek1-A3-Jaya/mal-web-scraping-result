@@ -61,8 +61,7 @@ function populateTrendingAnime(data) {
     const paginationElement = document.getElementById('pagination');
 
     function setupPagination() {
-        paginationElement.innerHTML = '';
-
+        paginationElement.innerHTML = '';    
         // Tombol "prev"
         const prevLi = document.createElement('li');
         prevLi.classList.add('page-item');
