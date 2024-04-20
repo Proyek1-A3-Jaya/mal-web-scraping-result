@@ -72,7 +72,6 @@ function populateTrendingAnime(data) {
             if (currentPage > 1) {
                 currentPage--;
                 displayData(currentPage);
-                highlightCurrentPage();
             }
         });
         prevLi.appendChild(prevLink);
@@ -87,7 +86,6 @@ function populateTrendingAnime(data) {
             if (currentPage < totalPages) {
                 currentPage++;
                 displayData(currentPage);
-                highlightCurrentPage();
             }
         });
         nextLi.appendChild(nextLink);
