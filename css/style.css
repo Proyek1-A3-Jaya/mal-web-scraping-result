@@ -295,6 +295,7 @@ nav .fas {
     display: flex;
     min-width: 100%;
     position: relative;
+    transition: transform 0.5s ease; 
 }
 
 .slide img {
@@ -303,6 +304,7 @@ nav .fas {
     display: block;
     margin-right: 15px;
     margin-left: 0px;
+    transition: opacity 0.5s ease;
 }
 
 .slide-content {
@@ -318,7 +320,18 @@ nav .fas {
     transform: translateY(-50%);
     padding: 0 20px; /* Atur padding agar konten tidak terlalu dekat dengan tepi slide */
     z-index: 0; /* Pastikan slide-content muncul di atas gambar */
+    transition: opacity 0.5s ease;
     
+}
+
+/* Atur transisi untuk slide saat di-hover */
+.slide:hover .slide-content {
+    opacity: 1; /* Ubah opacity menjadi 1 saat di-hover */
+}
+
+/* Atur transisi untuk gambar slide saat di-hover */
+.slide:hover img {
+    opacity: 0.5; /* Kurangi opacity gambar saat di-hover */
 }
 
 /* Atur posisi slide-content di sebelah kanan */
