@@ -73,6 +73,7 @@ nav ul li a:hover::after {
     background-color: #436850;
     background-color: #5cb683;
     height: 400px;
+    max-width: 100%;
 }
 
 .sub-title {
