@@ -87,7 +87,6 @@ nav ul li a:hover::after {
     padding: 22px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
 }
 
 .copyright p{
@@ -105,6 +104,7 @@ nav .fas {
 
 #anime-trending{
     padding: 50px 9.5%;
+    background-color: #38A3A5;
 }
 
 .trending__anime{
