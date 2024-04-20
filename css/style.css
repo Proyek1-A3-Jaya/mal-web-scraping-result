@@ -300,21 +300,39 @@ nav .fas {
 
 .slide-content {
 
-    flex: 1;
     /* padding: 0 20px; */
+    /* flex: 1;
     position: relative;
-    top: -50%;
-    left: 5%;
+    top: -50%;*/
+    left: 20%;
     max-width: 11%;
+    position: absolute;
+    top: 50%; /* Menempatkan slide-content di tengah vertikal slide */
+    transform: translateY(-50%);
+    max-width: 50%; /* Sesuaikan ukuran slide-content sesuai kebutuhan */
+    padding: 0 20px; /* Atur padding agar konten tidak terlalu dekat dengan tepi slide */
+    z-index: 0; /* Pastikan slide-content muncul di atas gambar */
     
+}
+
+/* Atur posisi slide-content di sebelah kanan */
+.slide-content.right {
+    right: 0;
+    left: auto; /* Pastikan posisi right dapat bekerja dengan benar */
+}
+
+/* Atur posisi slide-content di sebelah kiri */
+.slide-content.left {
+    left: 0;
+    right: auto; /* Pastikan posisi left dapat bekerja dengan benar */
 }
 
 .slider-controls {
     display: flex;
     justify-content: center;
     text-align: center;
-    position: absolute;
-    bottom: 30%;
+    position: relative;
+    bottom: 10%;
     /* Atur posisi vertikal tombol */
     left: 50%;
     /* Menempatkan tombol di tengah secara horizontal */
