@@ -429,7 +429,7 @@ button.view-synopsis:active {
     justify-content: center;
     text-align: center;
     position: relative;
-    bottom: 15%;
+    bottom: -10%;
     /* Atur posisi vertikal tombol */
     left: 50%;
     /* Menempatkan tombol di tengah secara horizontal */
