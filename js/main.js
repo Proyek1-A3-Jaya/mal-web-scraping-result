@@ -35,7 +35,7 @@ function populateTrendingAnime(data) {
                             <p> Volumes: ${anime.volumes} </p>
                             <p> Chapters: ${anime.chapters} </p>
                             <a href="${anime.manga_mal_url}"><i class="fa-solid fa-link"></i></a>
-                            <button class="view-synopsis btn btn-custom" data-bs-toggle="modal" data-bs-target="#synopsisModal" data-synopsis="${anime.synopsis}">
+                            <button class="view-synopsis btn btn-custom" data-bs-toggle="modal" data-bs-target="#synopsisModal" data-authors="${anime.authors}" data-genres="${anime.genres}" data-synopsis="${anime.synopsis}" data-characters="${anime.characters}">
                                 View Synopsis
                             </button>
                     </div>
@@ -103,13 +103,25 @@ function populateTrendingAnime(data) {
 document.addEventListener('click', function (event) {
     const button = event.target.closest('.view-synopsis');
     if (button) {
+        let authors = button.getAttribute('data-authors');
+        let genres = button.getAttribute('data-genres');
         let synopsis = button.getAttribute('data-synopsis');
+        let characters = button.getAttribute('data-characters');
 
         const modalTitle = document.getElementById('synopsisModalLabel');
         const modalBody = document.querySelector('.modal-body');
 
         modalTitle.textContent = "Manga Synopsis";
-        modalBody.textContent = synopsis;
+        modalBody.innerHTML = `
+        <h5>Authors: </h5>
+        ${authors}
+        <h5>Genres: </h5>
+        ${genres}
+        <h5>Synopsis: </h5>
+        ${synopsis}
+        <h5>Characters: </h5>
+        ${characters}
+        `;
     }
 });
 
