@@ -30,6 +30,9 @@
         </div>
     </div>
     <div id="hero">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" id="pagination"></ul>
+        </nav>
         <div class="slider-container">
             <div class="slider">
                 <!-- Slider items will be dynamically added here -->
@@ -43,9 +46,22 @@
     <div id="anime-trending">
         <div class="container">
             <h1 class="sub-title">Trending Now</h1>
-            <ul class="pagination" id="pagination"></ul>
             <div class="trending__anime">
                 <!-- Anime akan muncul di sini -->
+            </div>
+        </div>
+    </div>
+    <!-- Modal pop up untuk sinopsis -->
+    <div class="modal fade" id="synopsisModal" tabindex="-1" aria-labelledby="synopsisModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="synopsisModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Sinopsis akan ditampilkan di sini -->
+                </div>
             </div>
         </div>
     </div>
