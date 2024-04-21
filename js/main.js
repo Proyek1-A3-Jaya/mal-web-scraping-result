@@ -35,6 +35,9 @@ function populateTrendingAnime(data) {
                             <p> Volumes: ${anime.volumes} </p>
                             <p> Chapters: ${anime.chapters} </p>
                             <a href="${anime.manga_mal_url}"><i class="fa-solid fa-link"></i></a>
+                            <button class="view-synopsis btn btn-custom" data-bs-toggle="modal" data-bs-target="#synopsisModal" data-synopsis="${anime.synopsis}">
+                                View Synopsis
+                            </button>
                     </div>
                 </div>
                 <div class="product__item__text">
@@ -72,6 +75,7 @@ function populateTrendingAnime(data) {
             if (currentPage > 1) {
                 currentPage--;
                 displayData(currentPage);
+                highlightCurrentPage();
             }
         });
         prevLi.appendChild(prevLink);
@@ -86,6 +90,7 @@ function populateTrendingAnime(data) {
             if (currentPage < totalPages) {
                 currentPage++;
                 displayData(currentPage);
+                highlightCurrentPage();
             }
         });
         nextLi.appendChild(nextLink);
@@ -93,6 +98,29 @@ function populateTrendingAnime(data) {
     }
 
     setupPagination();
+}
+
+document.addEventListener('click', function (event) {
+    const button = event.target.closest('.view-synopsis');
+    if (button) {
+        let synopsis = button.getAttribute('data-synopsis');
+
+        const modalTitle = document.getElementById('synopsisModalLabel');
+        const modalBody = document.querySelector('.modal-body');
+
+        modalTitle.textContent = "Manga Synopsis";
+        modalBody.textContent = synopsis;
+    }
+});
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0"
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px"
 }
 
 function populateSlider(data) {
@@ -169,3 +197,5 @@ function populateSlider(data) {
     prevBtn.addEventListener('click', prevSlide);
     nextBtn.addEventListener('click', nextSlide);
 }
+
+populateSlider(data);
