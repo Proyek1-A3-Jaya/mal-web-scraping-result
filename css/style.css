@@ -70,10 +70,12 @@ nav ul li a:hover::after {
 }
 
 #hero{
-    background-color: #436850;
-    background-color: #5cb683;
-    height: 400px;
+    background-color: #384f40;
+    height: 590px;
     max-width: 100%;
+    background-image: url(../img/UI/wave2.png);
+    background-repeat: no-repeat;
+    padding: 130px;
 }
 
 .sub-title {
@@ -105,10 +107,10 @@ nav .fas {
 }
 
 #anime-trending{
-    padding: 50px 9.5%;
-    background-color: #38A3A5;
-    background-image: url(../img/UI/bghero.png);
-    background-size: cover;
+    padding: 120px 9.5%;
+    background-color: #000000;
+    background-image: url(../img/UI/wave.png);
+    background-repeat: no-repeat;
 }
 
 .trending__anime{
