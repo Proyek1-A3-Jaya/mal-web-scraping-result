@@ -207,11 +207,12 @@ nav .fas {
 }
 
 .pagination {
+    position: static;
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 30px;
-    width: 100%;
+    /* margin-top: 30px; */
+    width: 0%;
 }
 
 .pagination .page-item {
@@ -500,5 +501,10 @@ button.view-synopsis:active {
 
     .next-btn {
         right: 10px;
+    }
+
+    .pagination{
+        margin: 0 auto;
+        margin-bottom: -150%;
     }
 }
