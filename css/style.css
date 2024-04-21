@@ -431,7 +431,7 @@ button.view-synopsis:active {
     }
 
     .slide {
-        min-width: 100%;
+        min-width: 100% auto;
     }
 
     .slide img {
@@ -439,11 +439,19 @@ button.view-synopsis:active {
         margin-left: 0px; /* Memberikan margin kiri pada gambar */
     }
 
-    .slide-content {
-        position: relative;
-        max-width: 100%; /* Mengatur lebar maksimum ke 100% agar responsif */
-        padding: 30px 0; /* Sesuaikan padding untuk memberikan jarak antara content dan gambar */
-        text-align: center; /* Mengatur posisi teks ke tengah pada perangkat mobile */
+    .slide-content p{
+       display: none;
+    }
+
+    .slide-content h2{
+    left: 30%;
+    max-width: 100%;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    padding:0 50px;
+    z-index: 0;
+    transition: opacity 0.5s ease;
     }
 
     /* Mengatur lebar tombol */
