@@ -366,8 +366,8 @@ button.view-synopsis:active {
 }
 
 .slide img {
-    width: 213px;
-    height: 300px;
+    width: 100% auto;
+    height: 100% auto;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -422,8 +422,8 @@ button.view-synopsis:active {
 /* Responsiveness */
 @media screen and (max-width: 768px) {
     .slider-container {
-        max-width: 95%;
-        margin: 0 auto;
+        max-width: 95% auto;
+        margin: 10 auto;
     }
 
     .slider {
@@ -432,6 +432,8 @@ button.view-synopsis:active {
 
     .slide {
         min-width: 100% auto;
+        min-height: 100% auto;
+        margin: auto;
     }
 
     .slide img {
@@ -444,12 +446,12 @@ button.view-synopsis:active {
     }
 
     .slide-content h2{
-    left: 30%;
-    max-width: 100%;
+    left: 50%;
+    max-width: 40%;
     position: relative;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    padding:0 50px;
+    padding:0 45px;
     z-index: 0;
     transition: opacity 0.5s ease;
     }
