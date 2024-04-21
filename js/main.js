@@ -35,6 +35,9 @@ function populateTrendingAnime(data) {
                             <p> Volumes: ${anime.volumes} </p>
                             <p> Chapters: ${anime.chapters} </p>
                             <a href="${anime.manga_mal_url}"><i class="fa-solid fa-link"></i></a>
+                            <button class="view-synopsis btn btn-custom" data-bs-toggle="modal" data-bs-target="#synopsisModal" data-authors="${anime.authors}" data-genres="${anime.genres}" data-synopsis="${anime.synopsis}" data-characters="${anime.characters}">
+                                View Synopsis
+                            </button>
                     </div>
                 </div>
                 <div class="product__item__text">
@@ -72,6 +75,7 @@ function populateTrendingAnime(data) {
             if (currentPage > 1) {
                 currentPage--;
                 displayData(currentPage);
+                highlightCurrentPage();
             }
         });
         prevLi.appendChild(prevLink);
@@ -86,6 +90,7 @@ function populateTrendingAnime(data) {
             if (currentPage < totalPages) {
                 currentPage++;
                 displayData(currentPage);
+                highlightCurrentPage();
             }
         });
         nextLi.appendChild(nextLink);
@@ -94,3 +99,115 @@ function populateTrendingAnime(data) {
 
     setupPagination();
 }
+
+document.addEventListener('click', function (event) {
+    const button = event.target.closest('.view-synopsis');
+    if (button) {
+        let authors = button.getAttribute('data-authors');
+        let genres = button.getAttribute('data-genres');
+        let synopsis = button.getAttribute('data-synopsis');
+        let characters = button.getAttribute('data-characters');
+
+        const modalTitle = document.getElementById('synopsisModalLabel');
+        const modalBody = document.querySelector('.modal-body');
+
+        modalTitle.textContent = "Manga Synopsis";
+        modalBody.innerHTML = `
+        <h5>Authors: </h5>
+        ${authors}
+        <h5>Genres: </h5>
+        ${genres}
+        <h5>Synopsis: </h5>
+        ${synopsis}
+        <h5>Characters: </h5>
+        ${characters}
+        `;
+    }
+});
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0"
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px"
+}
+
+function populateSlider(data) {
+    const slider = document.querySelector('.slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let slideIndex = 0;
+
+    // Function untuk menambahkan slide
+    function addSlide(index) {
+        if (index >= 0 && index < data.length) {
+            const manga = data[index];
+            const slide = document.createElement('div');
+            slide.classList.add('slide');
+            slide.innerHTML = `
+                <img src="${manga.image_urls[0]}" alt="${manga.title}">
+                <div class="slide-content">
+                    <h2>${manga.title}</h2>
+                    <p>${manga.synopsis}</p>
+                </div>
+            `;
+            slider.appendChild(slide);
+        }
+    }
+
+    // Function untuk menampilkan slide berikutnya
+    function nextSlide() {
+        if (slideIndex < data.length - 1) {
+            slideIndex++;
+            if (slideIndex > 4) {
+                slideIndex = 0;
+            }
+        } else {
+            slideIndex = 0;
+        }
+        showSlide();
+    }
+
+    // Function untuk menampilkan slide sebelumnya
+    function prevSlide() {
+        if (slideIndex > 0) {
+            slideIndex--;
+        } else {
+            slideIndex = 4;
+        }
+        showSlide();
+    }
+
+    // Function untuk menampilkan slide yang sesuai dengan index
+    function showSlide() {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, index) => {
+            if (index === slideIndex) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    // Tambahkan slide pertama saat halaman dimuat
+    addSlide(0);
+
+    // Tambahkan slide-slide berikutnya
+    for (let i = 1; i < 5; i++) {
+        addSlide(i);
+    }
+
+    // Tampilkan slide pertama
+    showSlide();
+
+    // Tambahkan event listener untuk tombol navigasi
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+}
+
+populateSlider(data);

@@ -18,11 +18,11 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
+    background-color: #94A187 ;
 }
 
 .container {
-    padding: 15px 0;
+    padding: 30px 0;
 }
 
 nav {
@@ -30,10 +30,12 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .logo {
-    width: 120px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
 nav ul li {
@@ -53,7 +55,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #598d39;
+    background: #29524A;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -68,19 +70,10 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.header-text {
-    margin-top: 10%;
-    font-size: 20px;
-}
-
-.header-text h1 {
-    margin-top: 10px;
-    font-size: 60px;
-    margin-bottom: 10px;
-}
-
-.header-text h1 span {
-    color: #598d39;
+#hero{
+    background-image: linear-gradient(#94A187, #29524A);
+    max-width: 100%;
+    padding: 0 7%;
 }
 
 .sub-title {
@@ -90,13 +83,20 @@ nav ul li a:hover::after {
     margin-left: 20px;
 }
 
+.top5Mangas{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 22px 0;
+    padding: 25px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
 }
 
 .copyright p{
@@ -113,7 +113,8 @@ nav .fas {
 }
 
 #anime-trending{
-    padding: 50px 9.5%;
+    padding: 80px 9.5%;
+    background-image: linear-gradient(#29524A, #06070E);
 }
 
 .trending__anime{
@@ -142,7 +143,7 @@ nav .fas {
     font-size: 14px;
     font-weight: 500;
 	color: #ffffff;
-	background: #598d39;
+	background: #29524A;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -166,7 +167,7 @@ nav .fas {
 
 .product__item__text a:hover{
     font-weight: 700;
-    color: #5cb683;
+    color: #94A187;
 }
 
 .layer{
@@ -214,11 +215,12 @@ nav .fas {
 }
 
 .pagination {
+    position: static;
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 30px;
-    width: 100%;
+    /* margin-top: 30px; */
+    width: 0%;
 }
 
 .pagination .page-item {
@@ -227,17 +229,93 @@ nav .fas {
 
 .pagination .page-link {
     color: #fff;
-    border: 1px solid #598d39;
+    border: 1px solid #94A187;
     padding: 5px 10px;
     text-decoration: none;
     transition: background-color 0.3s;
-    background-color: #000000;
+    background-color: #29524A;
     font-weight: 600;
 }
 
 .pagination .page-link:hover {
-    background-color: #598d39;
+    background-color: #94A187;
     cursor: pointer;
+}
+
+/* Styles for the "View Synopsis" button */
+button.view-synopsis {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5%;
+}
+
+/* Hover effect */
+button.view-synopsis:hover {
+    background-color: #45a049;
+}
+
+/* Click effect */
+button.view-synopsis:active {
+    transform: translateY(1px);
+}
+
+.modal-title {
+    color: #000;
+}
+
+.modal-body {
+    color: #000; /* Atur warna teks menjadi hitam */
+    font-size: 16px;
+}
+
+/* Menambahkan warna latar belakang dan warna teks yang sesuai */
+.btn-custom {
+    background-color: #598d39;
+    color: #fff;
+    border: none;
+}
+
+/* Menambahkan animasi saat tombol dihover */
+.btn-custom:hover {
+    background-color: #4c7f2e;
+}
+
+/* Menyesuaikan ukuran tombol */
+.btn-custom {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Menyesuaikan tata letak dan ukuran modal */
+.modal-content {
+    background-color: #fff;
+    color: #000000;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal.fade .modal-dialog {
+    transform: scale(0.5);
+    transition: transform 0.5s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+}
+
+.btn-close {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-close:hover {
+    transform: rotate(180deg);
 }
 
 @media only screen and (max-width: 600px) {
@@ -248,7 +326,7 @@ nav .fas {
     }
 
     nav ul {
-        background: #598d39;
+        background: #29524A;
         position: fixed;
         top: 0;
         right: -200px;
@@ -277,5 +355,164 @@ nav .fas {
 
     .copyright {
         font-size: 14px;
+    }
+}
+
+.slider-container {
+    position: relative;
+    max-width:  95%;
+    margin: 0 auto;
+    top: 10%;
+    bottom: 10%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto;
+    display: flex;
+    min-width: 100%;
+    position: relative;
+    transition: transform 0.5s ease; 
+}
+
+.slide img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-right: 15px;
+    margin-left: 0px;
+    transition: opacity 0.5s ease;
+}
+
+.slide-content {
+
+    /* padding: 0 20px; */
+    /* flex: 1;
+    position: relative;
+    top: -50%;*/
+    left: 30%;
+    max-width: 100%;
+    position: absolute;
+    top: 45%; /* Menempatkan slide-content di tengah vertikal slide */
+    transform: translateY(-50%);
+    padding: 0 20px; /* Atur padding agar konten tidak terlalu dekat dengan tepi slide */
+    z-index: 0; /* Pastikan slide-content muncul di atas gambar */
+    transition: opacity 0.5s ease;
+    
+}
+
+/* Atur transisi untuk slide saat di-hover */
+.slide:hover .slide-content {
+    opacity: 1; /* Ubah opacity menjadi 1 saat di-hover */
+}
+
+/* Atur transisi untuk gambar slide saat di-hover */
+.slide:hover img {
+    opacity: 0.5; /* Kurangi opacity gambar saat di-hover */
+}
+
+/* Atur posisi slide-content di sebelah kanan */
+.slide-content.right {
+    right: 0;
+    left: auto; /* Pastikan posisi right dapat bekerja dengan benar */
+}
+
+/* Atur posisi slide-content di sebelah kiri */
+.slide-content.left {
+    left: 0;
+    right: auto; /* Pastikan posisi left dapat bekerja dengan benar */
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: -10%;
+    /* Atur posisi vertikal tombol */
+    left: 50%;
+    /* Menempatkan tombol di tengah secara horizontal */
+    right: 50%;
+    transform: translateX(-50%);
+    /* Menggeser tombol ke kiri sebesar setengah lebar tombol */
+}
+
+.prev-btn,
+.next-btn {
+    /* Menempatkan tombol di tengah secara horizontal */
+    background-color: #38A3A5;
+    opacity:calc(50%)
+    ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+}
+
+.prev-btn {
+    left: 15px;
+    margin-right: 5px;
+    
+}
+
+.next-btn {
+    right: 15px;
+    margin-left: 5px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .slider-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .slider {
+        flex-wrap: nowrap;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .slide img {
+        margin-right: 0; /* Menghilangkan margin kanan pada gambar */
+        margin-left: 0px; /* Memberikan margin kiri pada gambar */
+    }
+
+    .slide-content {
+        position: relative;
+        max-width: 100%; /* Mengatur lebar maksimum ke 100% agar responsif */
+        padding: 30px 0; /* Sesuaikan padding untuk memberikan jarak antara content dan gambar */
+        text-align: center; /* Mengatur posisi teks ke tengah pada perangkat mobile */
+    }
+
+    /* Mengatur lebar tombol */
+    .prev-btn,
+    .next-btn {
+        width: 25px;
+        height: 35px;
+        font-size: 10px;
+        padding: 10px;
+    }
+    /* Mengatur jarak antara tombol */
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .pagination{
+        margin: 0 auto;
+        margin-bottom: -150%;
     }
 }
