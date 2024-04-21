@@ -73,7 +73,7 @@ nav ul li a:hover::after {
 #hero{
     background-image: linear-gradient(#94A187, #29524A);
     max-width: 100%;
-    padding: 0 7%;
+    padding: 0 9.5%;
 }
 
 .sub-title {
@@ -247,8 +247,8 @@ button.view-synopsis {
     padding: 6px 12px;
     font-size: 12px;
     font-weight: bold;
-    color: #fff;
-    background-color: #4CAF50;
+    color: #29524A;
+    background-color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -258,7 +258,7 @@ button.view-synopsis {
 
 /* Hover effect */
 button.view-synopsis:hover {
-    background-color: #45a049;
+    background-color: #5cb683;
 }
 
 /* Click effect */
@@ -359,74 +359,26 @@ button.view-synopsis:active {
 }
 
 .slider-container {
-    position: relative;
-    max-width:  95%;
-    margin: 0 auto;
-    top: 10%;
-    bottom: 10%;
-    overflow: hidden;
-    height: 100%;
-}
-
-.slider {
     display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    flex: 0 0 auto;
-    display: flex;
-    min-width: 100%;
-    position: relative;
-    transition: transform 0.5s ease; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 500px;
 }
 
 .slide img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin-right: 15px;
-    margin-left: 0px;
-    transition: opacity 0.5s ease;
+    width: 213px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 80px;
 }
 
 .slide-content {
-
-    /* padding: 0 20px; */
-    /* flex: 1;
-    position: relative;
-    top: -50%;*/
-    left: 30%;
-    max-width: 100%;
+    left: 25%;
     position: absolute;
-    top: 45%; /* Menempatkan slide-content di tengah vertikal slide */
-    transform: translateY(-50%);
-    padding: 0 20px; /* Atur padding agar konten tidak terlalu dekat dengan tepi slide */
-    z-index: 0; /* Pastikan slide-content muncul di atas gambar */
-    transition: opacity 0.5s ease;
-    
-}
-
-/* Atur transisi untuk slide saat di-hover */
-.slide:hover .slide-content {
-    opacity: 1; /* Ubah opacity menjadi 1 saat di-hover */
-}
-
-/* Atur transisi untuk gambar slide saat di-hover */
-.slide:hover img {
-    opacity: 0.5; /* Kurangi opacity gambar saat di-hover */
-}
-
-/* Atur posisi slide-content di sebelah kanan */
-.slide-content.right {
-    right: 0;
-    left: auto; /* Pastikan posisi right dapat bekerja dengan benar */
-}
-
-/* Atur posisi slide-content di sebelah kiri */
-.slide-content.left {
-    left: 0;
-    right: auto; /* Pastikan posisi left dapat bekerja dengan benar */
+    padding: 0 9.5%; /* Atur padding agar konten tidak terlalu dekat dengan tepi slide */
+    transform: translateY(-84%);
 }
 
 .slider-controls {
