@@ -18,11 +18,11 @@ body {
 
 #header {
     width: 100%;
-    background-color: #12372A;
+    background-color: #94A187 ;
 }
 
 .container {
-    padding: 15px 0;
+    padding: 30px 0;
 }
 
 nav {
@@ -34,7 +34,8 @@ nav {
 }
 
 .logo {
-    width: 120px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
 nav ul li {
@@ -54,7 +55,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #598d39;
+    background: #29524A;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -70,12 +71,10 @@ nav ul li a:hover::after {
 }
 
 #hero{
-    background-color: #384f40;
-    height: 590px;
+    background-image: linear-gradient(#94A187, #29524A);
+    height: 550px;
     max-width: 100%;
-    background-image: url(../img/UI/wave2.png);
-    background-repeat: no-repeat;
-    padding: 130px;
+    padding: 0 7%;
 }
 
 .sub-title {
@@ -88,7 +87,7 @@ nav ul li a:hover::after {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 22px 0;
+    padding: 25px 0;
     background: #262626;
     font-weight: 300;
 }
@@ -107,10 +106,8 @@ nav .fas {
 }
 
 #anime-trending{
-    padding: 120px 9.5%;
-    background-color: #000000;
-    background-image: url(../img/UI/wave.png);
-    background-repeat: no-repeat;
+    padding: 80px 9.5%;
+    background-image: linear-gradient(#29524A, #06070E);
 }
 
 .trending__anime{
@@ -139,7 +136,7 @@ nav .fas {
     font-size: 14px;
     font-weight: 500;
 	color: #ffffff;
-	background: #598d39;
+	background: #29524A;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -163,7 +160,7 @@ nav .fas {
 
 .product__item__text a:hover{
     font-weight: 700;
-    color: #5cb683;
+    color: #94A187;
 }
 
 .layer{
@@ -224,16 +221,16 @@ nav .fas {
 
 .pagination .page-link {
     color: #fff;
-    border: 1px solid #598d39;
+    border: 1px solid #94A187;
     padding: 5px 10px;
     text-decoration: none;
     transition: background-color 0.3s;
-    background-color: #000000;
+    background-color: #29524A;
     font-weight: 600;
 }
 
 .pagination .page-link:hover {
-    background-color: #598d39;
+    background-color: #94A187;
     cursor: pointer;
 }
 
@@ -245,7 +242,7 @@ nav .fas {
     }
 
     nav ul {
-        background: #598d39;
+        background: #29524A;
         position: fixed;
         top: 0;
         right: -200px;
